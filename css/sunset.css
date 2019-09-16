@@ -420,4 +420,25 @@ h1 {
   -o-transform: translateY(0);
   transform: translateY(0); }
 
+/*
+    ------------------------------------------------
+	Quote Post Format
+	------------------------------------------------
+*/
+.sunset-format-quote .quote-content {
+  font-size: 42px;
+  font-weight: 100; }
+  .sunset-format-quote .quote-content:before {
+    content: '"';
+    display: inline-block;
+    position: relative; }
+  .sunset-format-quote .quote-content:after {
+    content: '"';
+    display: inline-block;
+    position: relative; }
+.sunset-format-quote .quote-author {
+  color: #898989;
+  font-size: 12px;
+  letter-spacing: 0.06em; }
+
 /*# sourceMappingURL=sunset.css.map */

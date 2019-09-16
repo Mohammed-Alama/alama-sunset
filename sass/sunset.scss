@@ -497,3 +497,33 @@ h1{
     }
   }
 }
+
+
+/*
+    ------------------------------------------------
+	Quote Post Format
+	------------------------------------------------
+*/
+
+.sunset-format-quote{
+  .quote-content{
+    font-size: 42px;
+    font-weight: 100;
+    &:before{
+      content: '"';
+      display: inline-block;
+      position: relative;
+    }
+    &:after{
+      content: '"';
+      display: inline-block;
+      position: relative;
+    }
+  }
+
+  .quote-author{
+    color: #898989;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+  }
+}
