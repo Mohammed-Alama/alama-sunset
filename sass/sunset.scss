@@ -46,7 +46,7 @@ $lighter-gray: #F1F1F1;
 }
 
 %background-gradient{
-  background: linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100% );
+  background: linear-gradient(to bottom,rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 100% );
 }
 /*
 	Font Icon
@@ -309,14 +309,13 @@ h1{
 }
 .entry-excerpt{
   &.image-caption{
-
-  }
   margin:30px 0 16px;
   p{
-    font-size :17px;
+    font-size :18px;
     line-height: 1.5em;
     font-weight: 300;
     letter-spacing: 0.02em;
+  }
   }
 }
 
@@ -461,18 +460,40 @@ h1{
 	------------------------------------------------
 */
 
-.sunset-format-gallery{
+.sunset-format-gallery {
   header {
-    h1{
-      &.entry-title{
+    h1 {
+      &.entry-title {
         margin-top: 20px;
       }
     }
   }
-  .standard-featured{
+
+  .standard-featured {
     height: 500px;
-    &:after{
-     background-color: transparent;
+
+    &:after {
+      background-color: transparent;
+    }
+  }
+
+  .entry-excerpt {
+    &.image-caption {
+      @extend %background-gradient;
+      @include animate(tranform,320ms);
+      @include transform(translateY(100%));
+      p {
+        color: #ffffff;
+        text-align: center;
+      }
+    }
+  }
+
+  .carousel-item:hover{
+    .entry-excerpt {
+      &.image-caption {
+        @include transform(translateY(0));
+      }
     }
   }
 }
