@@ -125,3 +125,12 @@ function sunset_get_embedded_media($post,$type = array()){
     endif;
     return $embed;
 }
+
+function sunset_grab_url(){
+    if (! preg_match('/<a\s[^>]*?href=[\'"](.+?)[\'"]/i',get_the_content(),$links)){
+        return false;
+    }else{
+        return esc_url_raw(($links[1]));
+    }
+
+}
